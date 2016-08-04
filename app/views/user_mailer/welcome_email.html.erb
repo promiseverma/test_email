@@ -1,24 +1,40 @@
 <html>
   <head>
     <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "EmailMessage",
-      "description": "Approval request for John's $10.13 expense for office supplies",
-      "action": {
-        "@type": "ConfirmAction",
-        "name": "Approve Expense",
-        "handler": {
-          "@type": "HttpActionHandler",
-          "url": "http://gmail-actions.appspot.com/success/AHRlWro4Vtg-5gT8VRpm1ubv8M7Uz7yaVO-GnCcT6bNLTlpc51ZotqWl1fUdzJi0GE1ld37V-ZW6s-hLtfAyocjbiYe8Q09O_EDm8DpjJu9TR4LJXRy8xfkC1w9NNiCK5erxITXOHJ0x"
+      {
+        "@context": "http://schema.org",
+        "@type": "EmailMessage",
+        "description": "We hope you enjoyed your meal at Joe's Diner. Please rate your experience.",
+        "action": {
+          "@type": "ReviewAction",
+          "review": {
+            "@type": "Review",
+            "itemReviewed": {
+              "@type": "FoodEstablishment",
+              "name": "Joe's Diner"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          },
+          "handler": {
+            "@type": "HttpActionHandler",
+            "url": "http://www.yourkarma.dev/add-data/data-order?utm_campaign=out-of-data&amp;utm_content=add-data&amp;utm_medium=email&amp;utm_source=Transactional",
+            "requiredProperty": {
+              "@type": "Property",
+              "name": "review.reviewRating.ratingValue"
+            },
+            "method": "http://schema.org/HttpRequestMethod/POST"
+          }
         }
       }
-    }
     </script>
   </head>
   <body>
     <p>
-      This a test for a One-click action in Gmail.
+      This a test for a Rate action in Gmail.
     </p>
   </body>
 </html>
