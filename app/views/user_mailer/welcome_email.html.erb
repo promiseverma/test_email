@@ -33,8 +33,38 @@
     </script>
   </head>
   <body>
-    <p>
-      This a test for a Rate action in Gmail.
-    </p>
+   <div itemscope itemtype="http://schema.org/Event">
+  <meta itemprop="name" content="Taco Night"/>
+  <meta itemprop="startDate" content="2015-04-18T15:30:00Z"/>
+  <meta itemprop="endDate" content="2015-04-18T16:30:00Z"/>
+  <div itemprop="location" itemscope itemtype="http://schema.org/Place">
+    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <meta itemprop="name" content="Google"/>
+      <meta itemprop="streetAddress" content="24 Willie Mays Plaza"/>
+      <meta itemprop="addressLocality" content="San Francisco"/>
+      <meta itemprop="addressRegion" content="CA"/>
+      <meta itemprop="postalCode" content="94107"/>
+      <meta itemprop="addressCountry" content="USA"/>
+    </div>
+  </div>
+  <div itemprop="potentialAction" itemscope itemtype="http://schema.org/RsvpAction">
+    <div itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
+      <link itemprop="url" href="http://mysite.com/rsvp?eventId=123&value=yes"/>
+    </div>
+    <link itemprop="attendance" href="http://schema.org/RsvpAttendance/Yes"/>
+  </div>
+  <div itemprop="potentialAction" itemscope itemtype="http://schema.org/RsvpAction">
+    <div itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
+      <link itemprop="url" href="http://mysite.com/rsvp?eventId=123&value=no"/>
+    </div>
+    <link itemprop="attendance" href="http://schema.org/RsvpAttendance/No"/>
+  </div>
+  <div itemprop="potentialAction" itemscope itemtype="http://schema.org/RsvpAction">
+    <div itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
+      <link itemprop="url" href="http://mysite.com/rsvp?eventId=123&value=maybe"/>
+    </div>
+    <link itemprop="attendance" href="http://schema.org/RsvpAttendance/Maybe"/>
+  </div>
+</div>
   </body>
 </html>
