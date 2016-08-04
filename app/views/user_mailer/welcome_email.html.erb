@@ -1,8 +1,40 @@
-<div itemscope itemtype ="http://schema.org/Movie">
-  <h1 itemprop="name">Avatar</h1>
-  <div itemprop="director" itemscope itemtype="http://schema.org/Person">
-  Director: <span itemprop="name">James Cameron</span> (born <span itemprop="birthDate">August 16, 1954</span>)
-  </div>
-  <span itemprop="genre">Science fiction</span>
-  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">Trailer</a>
-</div>
+<html>
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "EmailMessage",
+        "description": "We hope you enjoyed your meal at Joe's Diner. Please rate your experience.",
+        "action": {
+          "@type": "ReviewAction",
+          "review": {
+            "@type": "Review",
+            "itemReviewed": {
+              "@type": "FoodEstablishment",
+              "name": "Joe's Diner"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          },
+          "handler": {
+            "@type": "HttpActionHandler",
+            "url": "http://gmail-actions.appspot.com/success/AHRlWrrw6u_lWOlNs5cV_sITc8-KD9Cca276bTcZ8qWNG2nlOknqzfClC_yfRYSpeYmFlKYgq9UWmUrGslmFI578xoy83tTH6L1ORPmTx52cRiJ7yPXAcXwTYEBlerYy__6gzhxe-1YX",
+            "requiredProperty": {
+              "@type": "Property",
+              "name": "review.reviewRating.ratingValue"
+            },
+            "method": "http://schema.org/HttpRequestMethod/POST"
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>
+      This a test for a Rate action in Gmail.
+    </p>
+  </body>
+</html>
