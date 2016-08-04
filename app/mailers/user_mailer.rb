@@ -3,6 +3,6 @@ class UserMailer < ApplicationMailer
     @user = user
     @url  = 'http://example.com/login'
     mail(to: @user.email,
-         subject: "Already rendered!")
+         subject: "TEST ACTION!")
   	end
 end
