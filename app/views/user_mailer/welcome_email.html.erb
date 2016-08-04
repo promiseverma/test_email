@@ -1,70 +1,24 @@
 <html>
   <head>
     <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "EmailMessage",
-        "description": "We hope you enjoyed your meal at Joe's Diner. Please rate your experience.",
-        "action": {
-          "@type": "ReviewAction",
-          "review": {
-            "@type": "Review",
-            "itemReviewed": {
-              "@type": "FoodEstablishment",
-              "name": "Joe's Diner"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "bestRating": "5",
-              "worstRating": "1"
-            }
-          },
-          "handler": {
-            "@type": "HttpActionHandler",
-            "url": "http://gmail-actions.appspot.com/success/AHRlWrrw6u_lWOlNs5cV_sITc8-KD9Cca276bTcZ8qWNG2nlOknqzfClC_yfRYSpeYmFlKYgq9UWmUrGslmFI578xoy83tTH6L1ORPmTx52cRiJ7yPXAcXwTYEBlerYy__6gzhxe-1YX",
-            "requiredProperty": {
-              "@type": "Property",
-              "name": "review.reviewRating.ratingValue"
-            },
-            "method": "http://schema.org/HttpRequestMethod/POST"
-          }
+    {
+      "@context": "http://schema.org",
+      "@type": "EmailMessage",
+      "description": "Approval request for John's $10.13 expense for office supplies",
+      "action": {
+        "@type": "ConfirmAction",
+        "name": "Approve Expense",
+        "handler": {
+          "@type": "HttpActionHandler",
+          "url": "http://gmail-actions.appspot.com/success/AHRlWro4Vtg-5gT8VRpm1ubv8M7Uz7yaVO-GnCcT6bNLTlpc51ZotqWl1fUdzJi0GE1ld37V-ZW6s-hLtfAyocjbiYe8Q09O_EDm8DpjJu9TR4LJXRy8xfkC1w9NNiCK5erxITXOHJ0x"
         }
       }
+    }
     </script>
   </head>
   <body>
-   <div itemscope itemtype="http://schema.org/Event">
-  <meta itemprop="name" content="Taco Night"/>
-  <meta itemprop="startDate" content="2015-04-18T15:30:00Z"/>
-  <meta itemprop="endDate" content="2015-04-18T16:30:00Z"/>
-  <div itemprop="location" itemscope itemtype="http://schema.org/Place">
-    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <meta itemprop="name" content="Google"/>
-      <meta itemprop="streetAddress" content="24 Willie Mays Plaza"/>
-      <meta itemprop="addressLocality" content="San Francisco"/>
-      <meta itemprop="addressRegion" content="CA"/>
-      <meta itemprop="postalCode" content="94107"/>
-      <meta itemprop="addressCountry" content="USA"/>
-    </div>
-  </div>
-  <div itemprop="potentialAction" itemscope itemtype="http://schema.org/RsvpAction">
-    <div itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
-      <link itemprop="url" href="http://mysite.com/rsvp?eventId=123&value=yes"/>
-    </div>
-    <link itemprop="attendance" href="http://schema.org/RsvpAttendance/Yes"/>
-  </div>
-  <div itemprop="potentialAction" itemscope itemtype="http://schema.org/RsvpAction">
-    <div itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
-      <link itemprop="url" href="http://mysite.com/rsvp?eventId=123&value=no"/>
-    </div>
-    <link itemprop="attendance" href="http://schema.org/RsvpAttendance/No"/>
-  </div>
-  <div itemprop="potentialAction" itemscope itemtype="http://schema.org/RsvpAction">
-    <div itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
-      <link itemprop="url" href="http://mysite.com/rsvp?eventId=123&value=maybe"/>
-    </div>
-    <link itemprop="attendance" href="http://schema.org/RsvpAttendance/Maybe"/>
-  </div>
-</div>
+    <p>
+      This a test for a One-click action in Gmail.
+    </p>
   </body>
 </html>
